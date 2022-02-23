@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Employee>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Employee List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Employee" asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> &nbsp; Create New Employee
+            </a>
+        </div>
+    </div>
+    <br /><br />
+
+
+<table class="table table-bordered table-stiped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Created Date</th>
+            <th>Employee Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var employee in Model)
+        {
+            <tr>
+                <td width="15%">@employee.ID</td>
+                <td width="25%">@employee.CreatedDate</td>
+                <td width="40%">@employee.Name</td>
+                 <td>
+                    <div class="w-75 btn-group" role="group">
+                        <a asp-controller="Employee" asp-action="AddDependent" asp-route-id="@employee.ID"
+                        class="btn btn-primary mx-2"> <i class="bi bi-pencil-square"></i> Add Dependent</a>
+					</div>
+				</td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

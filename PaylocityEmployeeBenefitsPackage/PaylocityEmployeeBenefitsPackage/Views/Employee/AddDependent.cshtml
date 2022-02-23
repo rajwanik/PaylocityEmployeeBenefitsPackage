@@ -1,0 +1,39 @@
+﻿@model EmployeeDependent
+
+@{
+    int.TryParse(ViewData["EmployeeID"].ToString(), out int employeeID);
+    }
+
+@using (Html.BeginForm("AddDependent", "Employee", FormMethod.Post))
+{
+    
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create New Employee Dependent</h2>
+            <hr/>
+        </div>
+
+         <div class="mb-3">
+            <input asp-for="EmployeeID" value = "@employeeID" class="form-control" type="hidden"/>
+         </div>
+         <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Relationship"></label>
+             <select asp-for="Relationship" asp-items="Html.GetEnumSelectList<RelationshipType>()" class="form-control"  >
+            <option selected="selected" value="">Please select</option>
+        </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="width-150px">Create New Dependent</button>
+        <a asp-controller="Employee" asp-action="Index" class="btn btn-secondary" style="width-150px"> Back to List</a>
+    </div>
+     </div>
+
+}

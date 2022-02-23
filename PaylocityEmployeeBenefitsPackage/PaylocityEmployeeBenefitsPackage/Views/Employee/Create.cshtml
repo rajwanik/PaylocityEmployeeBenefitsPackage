@@ -1,0 +1,26 @@
+﻿@model Employee
+
+
+@using (Html.BeginForm("Create", "Employee", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create Employee</h2>
+            <hr/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control"/>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="width-150px">Create</button>
+        <a asp-controller="Employee" asp-action="Index" class="btn btn-secondary" style="width-150px"> Back to List</a>
+    </div>
+     </div>
+
+     
+
+}
