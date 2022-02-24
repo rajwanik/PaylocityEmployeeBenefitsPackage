@@ -3,22 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using PaylocityEmployeeBenefitsPackage.Data;
+using PaylocityEmployeeBenefitsPackage.DataAccess.Repository.IRepository;
 using PaylocityEmployeeBenefitsPackage.Models;
 
 namespace PaylocityEmployeeBenefitsPackage.Controllers
 {
     public class EmployeeController : Controller
     {
-        public EmployeeController(ApplicationDbContext dbContext)
+
+        public EmployeeController(IDataAccess dataAccess)
         {
-            DbContext = dbContext;
+            DataAccess = dataAccess;
         }
 
         public ApplicationDbContext DbContext { get; }
+        public IDataAccess DataAccess { get; }
 
         public IActionResult Index()
         {
-            var employees = DbContext.Employee.ToList();
+            var employees = DataAccess.EmployeeRepository.GetAll();
             return View(employees);
         }
 
@@ -31,8 +34,8 @@ namespace PaylocityEmployeeBenefitsPackage.Controllers
         public IActionResult Create(Employee employee)
         {
             employee.CreatedDate = DateTime.Now;
-            DbContext.Employee.Add(employee);
-            DbContext.SaveChanges();
+            DataAccess.EmployeeRepository.Add(employee);
+            DataAccess.Save();
             return RedirectToAction("Index");
         }
 
@@ -52,8 +55,8 @@ namespace PaylocityEmployeeBenefitsPackage.Controllers
             if (ModelState.IsValid)
             {
                 employeeDependent.CreatedDate = DateTime.Now;
-                DbContext.EmployeeDependent.Add(employeeDependent);
-                DbContext.SaveChanges();
+                DataAccess.EmployeeDependentRepository.Add(employeeDependent);
+                DataAccess.Save();
                 return RedirectToAction("Index");
             }
             return View(employeeDependent);

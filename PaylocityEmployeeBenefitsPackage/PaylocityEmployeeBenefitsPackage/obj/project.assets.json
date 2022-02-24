@@ -3037,6 +3037,32 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "PaylocityEmployeeBenefitsPackage.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.2",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.2",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.2",
+          "PaylocityEmployeeBenefitsPackage.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PaylocityEmployeeBenefitsPackage.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PaylocityEmployeeBenefitsPackage.DataAccess.dll": {}
+        }
+      },
+      "PaylocityEmployeeBenefitsPackage.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/PaylocityEmployeeBenefitsPackage.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PaylocityEmployeeBenefitsPackage.Models.dll": {}
+        }
       }
     }
   },
@@ -9443,6 +9469,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "PaylocityEmployeeBenefitsPackage.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../PaylocityEmployeeBenefitsPackage.Data/PaylocityEmployeeBenefitsPackage.DataAccess.csproj",
+      "msbuildProject": "../PaylocityEmployeeBenefitsPackage.Data/PaylocityEmployeeBenefitsPackage.DataAccess.csproj"
+    },
+    "PaylocityEmployeeBenefitsPackage.Models/1.0.0": {
+      "type": "project",
+      "path": "../PaylocityEmployeeBenefitsPackage.Models/PaylocityEmployeeBenefitsPackage.Models.csproj",
+      "msbuildProject": "../PaylocityEmployeeBenefitsPackage.Models/PaylocityEmployeeBenefitsPackage.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -9450,7 +9486,9 @@
       "Microsoft.EntityFrameworkCore >= 6.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.2",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.2"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.2",
+      "PaylocityEmployeeBenefitsPackage.DataAccess >= 1.0.0",
+      "PaylocityEmployeeBenefitsPackage.Models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -9487,7 +9525,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\personal\\LearningProjects\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage.Data\\PaylocityEmployeeBenefitsPackage.DataAccess.csproj": {
+              "projectPath": "D:\\personal\\LearningProjects\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage.Data\\PaylocityEmployeeBenefitsPackage.DataAccess.csproj"
+            },
+            "D:\\personal\\LearningProjects\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage.Models\\PaylocityEmployeeBenefitsPackage.Models.csproj": {
+              "projectPath": "D:\\personal\\LearningProjects\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage.Models\\PaylocityEmployeeBenefitsPackage.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

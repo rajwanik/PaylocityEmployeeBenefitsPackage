@@ -17,7 +17,8 @@
   </ItemGroup>
 
  <ItemGroup>
-   <Folder Include="Migrations\" />
+   <ProjectReference Include="..\PaylocityEmployeeBenefitsPackage.Data\PaylocityEmployeeBenefitsPackage.DataAccess.csproj" />
+   <ProjectReference Include="..\PaylocityEmployeeBenefitsPackage.Models\PaylocityEmployeeBenefitsPackage.Models.csproj" />
  </ItemGroup>
 
 </Project>
