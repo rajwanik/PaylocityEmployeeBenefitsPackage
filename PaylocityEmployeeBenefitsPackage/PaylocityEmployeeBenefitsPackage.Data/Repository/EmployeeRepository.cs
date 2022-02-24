@@ -13,12 +13,6 @@ namespace PaylocityEmployeeBenefitsPackage.DataAccess.Repository
 
         }
 
-        public IEnumerable<Employee> GetAll(Expression<Func<Employee, object>> propertyFilter)
-        {
-            IQueryable<Employee> query = dbSet;
-            return query.AsNoTracking().Include(propertyFilter).ToList();
-        }
-
         public void Update(Employee employee)
         {
             _applicationDbContext.Employee.Update(employee);

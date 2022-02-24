@@ -62,5 +62,11 @@ namespace PaylocityEmployeeBenefitsPackage.Controllers
             }
             return View(employeeDependent);
         }
+
+        public IActionResult ViewDependent(int id)
+        {
+            var employee = DataAccess.EmployeeRepository.GetFirstOrDefault(x=>x.ID == id,x=>x.Dependents);
+            return View(employee?.Dependents);
+        }
     }
 }

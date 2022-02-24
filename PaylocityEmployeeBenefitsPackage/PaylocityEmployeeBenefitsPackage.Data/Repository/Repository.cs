@@ -21,16 +21,29 @@ namespace PaylocityEmployeeBenefitsPackage.DataAccess.Repository
             dbSet.Add(entity);
         }
 
-        public IEnumerable<T> GetAll()
+        public IEnumerable<T> GetAll(Expression<Func<T, object>>? propertyFilter = null)
         {
             IQueryable<T> query = dbSet;
+            if (propertyFilter != null)
+            {
+                return query.AsNoTracking()
+                .Include(propertyFilter)
+                .ToList();
+            }
             return query.ToList();
         }
 
-        public T GetFirstOrDefault(Expression<Func<T, bool>> filter)
+        public T GetFirstOrDefault(Expression<Func<T, bool>> filter, Expression<Func<T, object>>? propertyFilter = null)
         {
             IQueryable<T> query = dbSet;
             query = query.Where(filter);
+            if (propertyFilter != null)
+            {
+                return query.AsNoTracking()
+                .Include(propertyFilter)
+                .FirstOrDefault();
+            }
+
             return query.FirstOrDefault();
         }
 

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<EmployeeDependent>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Employee Dependent List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Employee" asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> &nbsp; View Employee Dependents
+            </a>
+        </div>
+    </div>
+    <br /><br />
+
+
+<table class="table table-bordered table-stiped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Relationship</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var employeeDependent in Model)
+        {
+            <tr>
+                <td width="10%">@employeeDependent.Name</td>
+                <td width="10%">@employeeDependent.Relationship</td>
+            </tr>
+        }
+       
+    </tbody>
+</table>
+ <a asp-controller="Employee" asp-action="Index" class="btn btn-secondary" style="width-150px"> Back to List</a>
+</div>
