@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PaylocityEmployeeBenefitsPackage.Models\PaylocityEmployeeBenefitsPackage.Models.csproj" />
+    <ProjectReference Include="..\PaylocityEmployeeBenefitsPackage.Utility\PaylocityEmployeeBenefitsPackage.Utility.csproj" />
+  </ItemGroup>
+
+</Project>
