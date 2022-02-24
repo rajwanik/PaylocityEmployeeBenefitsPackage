@@ -11,16 +11,16 @@ namespace PaylocityEmployeeBenefitsPackage.Business
             double employeeDeductionAmount = CalculateEmployeeBenefitDeduction(employee);
 
             double employeeDependentDeductionAmount = CalulateDependentBenefitDeduction(employee);
-            var employeeSalaryAfterDeduction = Constants.EmployeePayPerPayCheckBeforeDeductions - employeeDeductionAmount + employeeDependentDeductionAmount;
+            var employeeSalaryAfterDeduction = Constants.EmployeePayPerPayCheckBeforeDeductions - (employeeDeductionAmount + employeeDependentDeductionAmount);
             
-            return employeeSalaryAfterDeduction;
+            return employeeSalaryAfterDeduction.ToEvenRound(Constants.PayRoundDecimals);
         }
 
         public double CalculateEmployeeBenefitDeduction(Employee employee)
         {
             var employeeBenefitDeductionPerPayCheck = Constants.EmployeeBenefitCostPerYear / 26;
 
-            return CalculateBenefitCostAfterDiscount(employee.Name, employeeBenefitDeductionPerPayCheck);
+            return CalculateBenefitCostAfterDiscount(employee.Name, employeeBenefitDeductionPerPayCheck).ToEvenRound(Constants.PayRoundDecimals);
 
         }
 
@@ -38,7 +38,7 @@ namespace PaylocityEmployeeBenefitsPackage.Business
                     deductionAmount = deductionAmount + CalculateBenefitCostAfterDiscount(employeeDependent.Name, employeeDependentBenefitDeductionPerPayCheck);
                 }
             }
-            return deductionAmount;
+            return deductionAmount.ToEvenRound(Constants.PayRoundDecimals);
         }
 
         public IEnumerable<Employee> GetEmployeeSalaryAfterDeduction(IEnumerable<Employee> employees)
@@ -55,11 +55,12 @@ namespace PaylocityEmployeeBenefitsPackage.Business
 
         private double CalculateBenefitCostAfterDiscount(string name, double benefitAmountPerPayCheck)
         {
+            double benefitCostAfterDiscount = benefitAmountPerPayCheck;
             if (name.StartsWith("A"))
             {
-                return benefitAmountPerPayCheck - benefitAmountPerPayCheck * Constants.DiscountRate;
+                benefitCostAfterDiscount = benefitAmountPerPayCheck - benefitAmountPerPayCheck * Constants.DiscountRate;
             }
-            return Math.Round(benefitAmountPerPayCheck, 2, MidpointRounding.ToEven);
+            return benefitCostAfterDiscount;
         }
     }
 }

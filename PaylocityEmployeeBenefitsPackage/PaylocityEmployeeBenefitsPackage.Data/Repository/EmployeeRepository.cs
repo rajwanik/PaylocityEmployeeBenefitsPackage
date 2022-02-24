@@ -2,6 +2,7 @@
 using PaylocityEmployeeBenefitsPackage.Data;
 using PaylocityEmployeeBenefitsPackage.DataAccess.Repository.IRepository;
 using PaylocityEmployeeBenefitsPackage.Models;
+using System.Linq.Expressions;
 
 namespace PaylocityEmployeeBenefitsPackage.DataAccess.Repository
 {
@@ -12,11 +13,10 @@ namespace PaylocityEmployeeBenefitsPackage.DataAccess.Repository
 
         }
 
-        public IEnumerable<Employee> GetAll(bool includeAllProperties = false)
+        public IEnumerable<Employee> GetAll(Expression<Func<Employee, object>> propertyFilter)
         {
             IQueryable<Employee> query = dbSet;
-            query.Include(x => x.Dependents);
-            return query.ToList();
+            return query.AsNoTracking().Include(propertyFilter).ToList();
         }
 
         public void Update(Employee employee)

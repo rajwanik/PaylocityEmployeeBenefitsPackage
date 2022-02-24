@@ -7,5 +7,6 @@
         public const int NumberOfPayChecksPerYear = 26;
         public const double DiscountRate = 0.1;
         public const double EmployeePayPerPayCheckBeforeDeductions = 2000;
+        public const int PayRoundDecimals = 2;
     }
 }

@@ -21,7 +21,7 @@ namespace PaylocityEmployeeBenefitsPackage.Controllers
 
         public IActionResult Index()
         {
-            var employees = DataAccess.EmployeeRepository.GetAll(true);
+            var employees = DataAccess.EmployeeRepository.GetAll(x=>x.Dependents);
             employees = DeductionCalculator.GetEmployeeSalaryAfterDeduction(employees);
             return View(employees);
         }
