@@ -12,5 +12,8 @@ namespace PaylocityEmployeeBenefitsPackage.Business.Interfaces
 
         //Calculate deduction for benefits of employee dependents
         double CalulateDependentBenefitDeduction(Employee employee);
+
+        //Calculates deduction for all employees and their dependents
+        IEnumerable<Employee> GetEmployeeSalaryAfterDeduction(IEnumerable<Employee> employees);
     }
 }

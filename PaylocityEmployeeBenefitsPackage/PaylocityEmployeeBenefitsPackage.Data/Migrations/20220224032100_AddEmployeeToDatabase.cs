@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace PaylocityEmployeeBenefitsPackage.Migrations
+namespace PaylocityEmployeeBenefitsPackage.DataAccess.Migrations
 {
-    public partial class AddEmployee : Migration
+    public partial class AddEmployeeToDatabase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

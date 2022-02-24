@@ -17,6 +17,7 @@
   </ItemGroup>
 
  <ItemGroup>
+   <ProjectReference Include="..\PaylocityEmployeeBenefitsPackage.Business\PaylocityEmployeeBenefitsPackage.Business.csproj" />
    <ProjectReference Include="..\PaylocityEmployeeBenefitsPackage.Data\PaylocityEmployeeBenefitsPackage.DataAccess.csproj" />
    <ProjectReference Include="..\PaylocityEmployeeBenefitsPackage.Models\PaylocityEmployeeBenefitsPackage.Models.csproj" />
  </ItemGroup>

@@ -11,8 +11,9 @@ namespace PaylocityEmployeeBenefitsPackage.Business
             double employeeDeductionAmount = CalculateEmployeeBenefitDeduction(employee);
 
             double employeeDependentDeductionAmount = CalulateDependentBenefitDeduction(employee);
-
-            return employeeDeductionAmount + employeeDependentDeductionAmount;
+            var employeeSalaryAfterDeduction = Constants.EmployeePayPerPayCheckBeforeDeductions - employeeDeductionAmount + employeeDependentDeductionAmount;
+            
+            return employeeSalaryAfterDeduction;
         }
 
         public double CalculateEmployeeBenefitDeduction(Employee employee)
@@ -29,12 +30,27 @@ namespace PaylocityEmployeeBenefitsPackage.Business
 
             double deductionAmount = 0;
 
-            var employeeDependents = employee.Dependents.ToList();
-            foreach (var employeeDependent in employeeDependents)
+            var employeeDependents = employee.Dependents?.ToList();
+            if (employeeDependents != null)
             {
-                deductionAmount = deductionAmount + CalculateBenefitCostAfterDiscount(employeeDependent.Name, employeeDependentBenefitDeductionPerPayCheck);
+                foreach (var employeeDependent in employeeDependents)
+                {
+                    deductionAmount = deductionAmount + CalculateBenefitCostAfterDiscount(employeeDependent.Name, employeeDependentBenefitDeductionPerPayCheck);
+                }
             }
             return deductionAmount;
+        }
+
+        public IEnumerable<Employee> GetEmployeeSalaryAfterDeduction(IEnumerable<Employee> employees)
+        {
+            foreach (var employee in employees)
+            {
+                employee.SalaryAfterDeduction = CalculateBenefitDeduction(employee);
+                employee.EmployeeBenefitCostBeforeDeduction = CalculateEmployeeBenefitDeduction(employee);
+                employee.EmployeeDependentBenefitCostBeforeDeduction = CalulateDependentBenefitDeduction(employee);
+            }
+
+            return employees;
         }
 
         private double CalculateBenefitCostAfterDiscount(string name, double benefitAmountPerPayCheck)
@@ -43,7 +59,7 @@ namespace PaylocityEmployeeBenefitsPackage.Business
             {
                 return benefitAmountPerPayCheck - benefitAmountPerPayCheck * Constants.DiscountRate;
             }
-            return benefitAmountPerPayCheck;
+            return Math.Round(benefitAmountPerPayCheck, 2, MidpointRounding.ToEven);
         }
     }
 }

@@ -12,6 +12,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.2",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.2",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.2",
+          "PaylocityEmployeeBenefitsPackage.Business": "1.0.0",
           "PaylocityEmployeeBenefitsPackage.DataAccess": "1.0.0",
           "PaylocityEmployeeBenefitsPackage.Models": "1.0.0"
         },
@@ -2208,6 +2209,15 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "PaylocityEmployeeBenefitsPackage.Business/1.0.0": {
+        "dependencies": {
+          "PaylocityEmployeeBenefitsPackage.Models": "1.0.0",
+          "PaylocityEmployeeBenefitsPackage.Utility": "1.0.0"
+        },
+        "runtime": {
+          "PaylocityEmployeeBenefitsPackage.Business.dll": {}
+        }
+      },
       "PaylocityEmployeeBenefitsPackage.DataAccess/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.2",
@@ -2222,6 +2232,11 @@
       "PaylocityEmployeeBenefitsPackage.Models/1.0.0": {
         "runtime": {
           "PaylocityEmployeeBenefitsPackage.Models.dll": {}
+        }
+      },
+      "PaylocityEmployeeBenefitsPackage.Utility/1.0.0": {
+        "runtime": {
+          "PaylocityEmployeeBenefitsPackage.Utility.dll": {}
         }
       }
     }
@@ -3429,12 +3444,22 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
+    "PaylocityEmployeeBenefitsPackage.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "PaylocityEmployeeBenefitsPackage.DataAccess/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "PaylocityEmployeeBenefitsPackage.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PaylocityEmployeeBenefitsPackage.Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -23,15 +23,21 @@
             <th>Employee ID</th>
             <th>Created Date</th>
             <th>Employee Name</th>
+            <th>Salary Per Pay Period</th>
+            <th>Employee Benefit Cost</th>
+            <th>Employee Dependent Benefit Cost</th>
         </tr>
     </thead>
     <tbody>
         @foreach(var employee in Model)
         {
             <tr>
-                <td width="15%">@employee.ID</td>
-                <td width="25%">@employee.CreatedDate</td>
-                <td width="40%">@employee.Name</td>
+                <td width="10%">@employee.ID</td>
+                <td width="10%">@employee.CreatedDate</td>
+                <td width="15%">@employee.Name</td>
+                <td width="15%">@employee.SalaryAfterDeduction</td>
+                <td width="15%">@employee.EmployeeBenefitCostBeforeDeduction</td>
+                <td width="15%">@employee.EmployeeDependentBenefitCostBeforeDeduction</td>
                  <td>
                     <div class="w-75 btn-group" role="group">
                         <a asp-controller="Employee" asp-action="AddDependent" asp-route-id="@employee.ID"

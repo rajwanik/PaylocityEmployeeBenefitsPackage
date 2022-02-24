@@ -9,11 +9,11 @@ using PaylocityEmployeeBenefitsPackage.Data;
 
 #nullable disable
 
-namespace PaylocityEmployeeBenefitsPackage.Migrations
+namespace PaylocityEmployeeBenefitsPackage.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220223053608_AddEmployee")]
-    partial class AddEmployee
+    [Migration("20220224032100_AddEmployeeToDatabase")]
+    partial class AddEmployeeToDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

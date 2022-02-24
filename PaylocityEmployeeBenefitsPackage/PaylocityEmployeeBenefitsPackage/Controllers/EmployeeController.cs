@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PaylocityEmployeeBenefitsPackage.Business.Interfaces;
 using PaylocityEmployeeBenefitsPackage.Data;
 using PaylocityEmployeeBenefitsPackage.DataAccess.Repository.IRepository;
 using PaylocityEmployeeBenefitsPackage.Models;
@@ -8,17 +9,20 @@ namespace PaylocityEmployeeBenefitsPackage.Controllers
     public class EmployeeController : Controller
     {
 
-        public EmployeeController(IDataAccess dataAccess)
+        public EmployeeController(IDataAccess dataAccess, IDeductionCalculator deductionCalculator)
         {
             DataAccess = dataAccess;
+            DeductionCalculator = deductionCalculator;
         }
 
         public ApplicationDbContext DbContext { get; }
         public IDataAccess DataAccess { get; }
+        public IDeductionCalculator DeductionCalculator { get; }
 
         public IActionResult Index()
         {
-            var employees = DataAccess.EmployeeRepository.GetAll();
+            var employees = DataAccess.EmployeeRepository.GetAll(true);
+            employees = DeductionCalculator.GetEmployeeSalaryAfterDeduction(employees);
             return View(employees);
         }
 

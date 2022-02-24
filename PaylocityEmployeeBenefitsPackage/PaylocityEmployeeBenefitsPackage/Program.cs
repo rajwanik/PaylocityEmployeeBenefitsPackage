@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using PaylocityEmployeeBenefitsPackage.Business;
+using PaylocityEmployeeBenefitsPackage.Business.Interfaces;
 using PaylocityEmployeeBenefitsPackage.Data;
 using PaylocityEmployeeBenefitsPackage.DataAccess.Repository;
 using PaylocityEmployeeBenefitsPackage.DataAccess.Repository.IRepository;
@@ -10,6 +12,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<IDataAccess, DataAccess>();
+builder.Services.AddTransient<IDeductionCalculator, DeductionCalculator>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -8,7 +8,7 @@ using PaylocityEmployeeBenefitsPackage.Data;
 
 #nullable disable
 
-namespace PaylocityEmployeeBenefitsPackage.Migrations
+namespace PaylocityEmployeeBenefitsPackage.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
