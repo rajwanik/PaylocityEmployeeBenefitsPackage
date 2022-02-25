@@ -38,6 +38,9 @@ namespace PaylocityEmployeeBenefitsPackage.DataAccess.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<double>("Salary")
+                        .HasColumnType("float");
+
                     b.HasKey("ID");
 
                     b.ToTable("Employee");

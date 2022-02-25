@@ -12,8 +12,8 @@ using PaylocityEmployeeBenefitsPackage.Data;
 namespace PaylocityEmployeeBenefitsPackage.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220224032100_AddEmployeeToDatabase")]
-    partial class AddEmployeeToDatabase
+    [Migration("20220225020144_AddToDatabase")]
+    partial class AddToDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -39,6 +39,9 @@ namespace PaylocityEmployeeBenefitsPackage.DataAccess.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<double>("Salary")
+                        .HasColumnType("float");
 
                     b.HasKey("ID");
 

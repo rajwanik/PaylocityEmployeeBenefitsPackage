@@ -14,6 +14,9 @@ namespace PaylocityEmployeeBenefitsPackage.Models
 
         public DateTime CreatedDate { get; set; }
 
+        [Display(Name ="Salary Per Year")]
+        public double Salary { get; set; }
+
         public virtual List<EmployeeDependent> Dependents { get; set; }
 
         [NotMapped]
