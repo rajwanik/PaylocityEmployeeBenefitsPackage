@@ -15,4 +15,9 @@
     <PackageReference Include="coverlet.collector" Version="3.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PaylocityEmployeeBenefitsPackage.Business\PaylocityEmployeeBenefitsPackage.Business.csproj" />
+    <ProjectReference Include="..\PaylocityEmployeeBenefitsPackage.UnitTest.Common\PaylocityEmployeeBenefitsPackage.UnitTest.Common.csproj" />
+  </ItemGroup>
+
 </Project>

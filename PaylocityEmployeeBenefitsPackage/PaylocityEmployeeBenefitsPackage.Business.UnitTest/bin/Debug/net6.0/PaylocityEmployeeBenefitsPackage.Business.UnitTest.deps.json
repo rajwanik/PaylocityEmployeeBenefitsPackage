@@ -12,6 +12,8 @@
           "Microsoft.NET.Test.Sdk": "16.11.0",
           "NUnit": "3.13.2",
           "NUnit3TestAdapter": "4.0.0",
+          "PaylocityEmployeeBenefitsPackage.Business": "1.0.0",
+          "PaylocityEmployeeBenefitsPackage.UnitTest.Common": "1.0.0",
           "coverlet.collector": "3.1.0"
         },
         "runtime": {
@@ -688,6 +690,33 @@
           "System.Threading": "4.0.11",
           "System.Xml.ReaderWriter": "4.0.11"
         }
+      },
+      "PaylocityEmployeeBenefitsPackage.Business/1.0.0": {
+        "dependencies": {
+          "PaylocityEmployeeBenefitsPackage.Models": "1.0.0",
+          "PaylocityEmployeeBenefitsPackage.Utility": "1.0.0"
+        },
+        "runtime": {
+          "PaylocityEmployeeBenefitsPackage.Business.dll": {}
+        }
+      },
+      "PaylocityEmployeeBenefitsPackage.Models/1.0.0": {
+        "runtime": {
+          "PaylocityEmployeeBenefitsPackage.Models.dll": {}
+        }
+      },
+      "PaylocityEmployeeBenefitsPackage.UnitTest.Common/1.0.0": {
+        "dependencies": {
+          "PaylocityEmployeeBenefitsPackage.Models": "1.0.0"
+        },
+        "runtime": {
+          "PaylocityEmployeeBenefitsPackage.UnitTest.Common.dll": {}
+        }
+      },
+      "PaylocityEmployeeBenefitsPackage.Utility/1.0.0": {
+        "runtime": {
+          "PaylocityEmployeeBenefitsPackage.Utility.dll": {}
+        }
       }
     }
   },
@@ -1039,6 +1068,26 @@
       "sha512": "sha512-Mk2mKmPi0nWaoiYeotq1dgeNK1fqWh61+EK+w4Wu8SWuTYLzpUnschb59bJtGywaPq7SmTuPf44wrXRwbIrukg==",
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
+    },
+    "PaylocityEmployeeBenefitsPackage.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PaylocityEmployeeBenefitsPackage.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PaylocityEmployeeBenefitsPackage.UnitTest.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PaylocityEmployeeBenefitsPackage.Utility/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

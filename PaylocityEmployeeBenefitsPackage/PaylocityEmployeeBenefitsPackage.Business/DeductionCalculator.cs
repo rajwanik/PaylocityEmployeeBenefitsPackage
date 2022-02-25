@@ -11,7 +11,7 @@ namespace PaylocityEmployeeBenefitsPackage.Business
             double employeeDeductionAmount = CalculateEmployeeBenefitDeduction(employee);
 
             double employeeDependentDeductionAmount = CalulateDependentBenefitDeduction(employee);
-            var employeeSalaryAfterDeduction = Constants.EmployeePayPerPayCheckBeforeDeductions - (employeeDeductionAmount + employeeDependentDeductionAmount);
+            var employeeSalaryAfterDeduction = employee.Salary/Constants.NumberOfPayChecksPerYear - (employeeDeductionAmount + employeeDependentDeductionAmount);
             
             return employeeSalaryAfterDeduction.ToEvenRound(Constants.PayRoundDecimals);
         }
