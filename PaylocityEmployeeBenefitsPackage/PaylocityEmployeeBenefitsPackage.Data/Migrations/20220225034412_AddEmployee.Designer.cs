@@ -12,8 +12,8 @@ using PaylocityEmployeeBenefitsPackage.Data;
 namespace PaylocityEmployeeBenefitsPackage.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220225020144_AddToDatabase")]
-    partial class AddToDatabase
+    [Migration("20220225034412_AddEmployee")]
+    partial class AddEmployee
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

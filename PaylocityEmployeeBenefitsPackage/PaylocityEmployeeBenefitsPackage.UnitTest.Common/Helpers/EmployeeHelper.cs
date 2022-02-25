@@ -1,4 +1,5 @@
 ﻿using PaylocityEmployeeBenefitsPackage.Models;
+using PaylocityEmployeeBenefitsPackage.UnitTest.Common.TestData;
 
 namespace PaylocityEmployeeBenefitsPackage.UnitTest.Common
 {
@@ -43,6 +44,21 @@ namespace PaylocityEmployeeBenefitsPackage.UnitTest.Common
             }
 
             return employee;
+        }
+
+        public static List<Employee> CreateEmployeeList(List<EmployeeBenefitDeductionTestData> employeeTestData)
+        {
+            var employeeList = new List<Employee>();
+
+            foreach (var testData in employeeTestData)
+            {
+                var employee = CreateEmployee(testData.NumberOfDependents, testData.EmployeeNameStartsWithA, testData.NumberOfDependentsNameStartingWithA, testData.SalaryPerYear);
+
+                employee.ID = testData.EmployeeId;
+                employeeList.Add(employee);
+            }
+
+            return employeeList;
         }
     }
 }

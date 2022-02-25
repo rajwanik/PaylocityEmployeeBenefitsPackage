@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PaylocityEmployeeBenefitsPackage.DataAccess.Migrations
 {
-    public partial class AddToDatabase : Migration
+    public partial class AddEmployee : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
