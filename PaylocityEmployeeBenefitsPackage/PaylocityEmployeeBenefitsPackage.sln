@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaylocityEmployeeBenefitsPa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaylocityEmployeeBenefitsPackage.UnitTest.Common", "PaylocityEmployeeBenefitsPackage.UnitTest.Common\PaylocityEmployeeBenefitsPackage.UnitTest.Common.csproj", "{DC635A24-33BB-426B-B953-398C3FDF61A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaylocityEmployeeBenefitsPackage.UI.Specflow", "PaylocityEmployeeBenefitsPackage.UI.Specflow\PaylocityEmployeeBenefitsPackage.UI.Specflow.csproj", "{9ADED8CB-822E-4065-AB27-904F9301704B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaylocityEmployeeBenefitsPackage.UI.Specflow", "PaylocityEmployeeBenefitsPackage.UI.Specflow\PaylocityEmployeeBenefitsPackage.UI.Specflow.csproj", "{9ADED8CB-822E-4065-AB27-904F9301704B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{E97708B4-B773-41C1-9A33-5D53A043689F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +62,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9052F72A-1EF4-459C-A47D-B13F0ECCC256} = {E97708B4-B773-41C1-9A33-5D53A043689F}
+		{DC635A24-33BB-426B-B953-398C3FDF61A6} = {E97708B4-B773-41C1-9A33-5D53A043689F}
+		{9ADED8CB-822E-4065-AB27-904F9301704B} = {E97708B4-B773-41C1-9A33-5D53A043689F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D565C92B-F5CE-4375-A386-B3E715EE721B}
