@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaylocityEmployeeBenefitsPa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaylocityEmployeeBenefitsPackage.Business", "PaylocityEmployeeBenefitsPackage.Business\PaylocityEmployeeBenefitsPackage.Business.csproj", "{3D92BEA3-30DC-4110-A0B0-C1C0A63AF27C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaylocityEmployeeBenefitsPackage.Business.UnitTest", "PaylocityEmployeeBenefitsPackage.Business.UnitTest\PaylocityEmployeeBenefitsPackage.Business.UnitTest.csproj", "{9052F72A-1EF4-459C-A47D-B13F0ECCC256}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaylocityEmployeeBenefitsPackage.Business.UnitTest", "PaylocityEmployeeBenefitsPackage.Business.UnitTest\PaylocityEmployeeBenefitsPackage.Business.UnitTest.csproj", "{9052F72A-1EF4-459C-A47D-B13F0ECCC256}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaylocityEmployeeBenefitsPackage.UnitTest.Common", "PaylocityEmployeeBenefitsPackage.UnitTest.Common\PaylocityEmployeeBenefitsPackage.UnitTest.Common.csproj", "{DC635A24-33BB-426B-B953-398C3FDF61A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaylocityEmployeeBenefitsPackage.UnitTest.Common", "PaylocityEmployeeBenefitsPackage.UnitTest.Common\PaylocityEmployeeBenefitsPackage.UnitTest.Common.csproj", "{DC635A24-33BB-426B-B953-398C3FDF61A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaylocityEmployeeBenefitsPackage.UI.Specflow", "PaylocityEmployeeBenefitsPackage.UI.Specflow\PaylocityEmployeeBenefitsPackage.UI.Specflow.csproj", "{9ADED8CB-822E-4065-AB27-904F9301704B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{DC635A24-33BB-426B-B953-398C3FDF61A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC635A24-33BB-426B-B953-398C3FDF61A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC635A24-33BB-426B-B953-398C3FDF61A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ADED8CB-822E-4065-AB27-904F9301704B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ADED8CB-822E-4065-AB27-904F9301704B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ADED8CB-822E-4065-AB27-904F9301704B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ADED8CB-822E-4065-AB27-904F9301704B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
