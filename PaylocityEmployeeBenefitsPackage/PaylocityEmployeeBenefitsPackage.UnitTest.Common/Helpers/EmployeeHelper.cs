@@ -1,4 +1,6 @@
-﻿using PaylocityEmployeeBenefitsPackage.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using PaylocityEmployeeBenefitsPackage.Data;
+using PaylocityEmployeeBenefitsPackage.Models;
 using PaylocityEmployeeBenefitsPackage.UnitTest.Common.TestData;
 
 namespace PaylocityEmployeeBenefitsPackage.UnitTest.Common
@@ -59,6 +61,26 @@ namespace PaylocityEmployeeBenefitsPackage.UnitTest.Common
             }
 
             return employeeList;
+        }
+
+        public static ApplicationDbContext BuildApplicationDbContext(string dbName, int numberOfEmployees)
+        {
+            var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
+            optionsBuilder.UseInMemoryDatabase(dbName);
+            var applicationDbContext = new ApplicationDbContext(optionsBuilder.Options);
+            //Add Test Data
+            for (int i = 1; i <= numberOfEmployees; i++)
+            {
+                applicationDbContext.Add(CreateNewEmployee(i, "Employee" + i.ToString()));
+            }
+            applicationDbContext.SaveChanges();
+
+            return applicationDbContext;
+        }
+
+        public static Employee CreateNewEmployee(int id, string name)
+        {
+            return new Employee() { ID = id, Name = name, CreatedDate = DateTime.Now, Salary = 52000 };
         }
     }
 }
