@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaylocityEmployeeBenefitsPa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{E97708B4-B773-41C1-9A33-5D53A043689F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaylocityEmployeeBenefitsPackage.DataAccess.UnitTest", "PaylocityEmployeeBenefitsPackage.DataAccess.UnitTest\PaylocityEmployeeBenefitsPackage.DataAccess.UnitTest.csproj", "{0FA5F394-934A-4B4B-B76B-5F73101528D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaylocityEmployeeBenefitsPackage.DataAccess.UnitTest", "PaylocityEmployeeBenefitsPackage.DataAccess.UnitTest\PaylocityEmployeeBenefitsPackage.DataAccess.UnitTest.csproj", "{0FA5F394-934A-4B4B-B76B-5F73101528D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaylocityEmployeeBenefitsPackage.Conrollers.UnitTest", "PaylocityEmployeeBenefitsPackage.Conrollers.UnitTest\PaylocityEmployeeBenefitsPackage.Conrollers.UnitTest.csproj", "{B89CA240-CAF7-4239-AEB8-A02E94B1DC26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,10 @@ Global
 		{0FA5F394-934A-4B4B-B76B-5F73101528D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FA5F394-934A-4B4B-B76B-5F73101528D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FA5F394-934A-4B4B-B76B-5F73101528D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B89CA240-CAF7-4239-AEB8-A02E94B1DC26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B89CA240-CAF7-4239-AEB8-A02E94B1DC26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B89CA240-CAF7-4239-AEB8-A02E94B1DC26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B89CA240-CAF7-4239-AEB8-A02E94B1DC26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{DC635A24-33BB-426B-B953-398C3FDF61A6} = {E97708B4-B773-41C1-9A33-5D53A043689F}
 		{9ADED8CB-822E-4065-AB27-904F9301704B} = {E97708B4-B773-41C1-9A33-5D53A043689F}
 		{0FA5F394-934A-4B4B-B76B-5F73101528D5} = {E97708B4-B773-41C1-9A33-5D53A043689F}
+		{B89CA240-CAF7-4239-AEB8-A02E94B1DC26} = {E97708B4-B773-41C1-9A33-5D53A043689F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D565C92B-F5CE-4375-A386-B3E715EE721B}
