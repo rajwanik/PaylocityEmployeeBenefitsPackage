@@ -3,6 +3,7 @@ using PaylocityEmployeeBenefitsPackage.Business.Interfaces;
 using PaylocityEmployeeBenefitsPackage.Data;
 using PaylocityEmployeeBenefitsPackage.DataAccess.Repository.IRepository;
 using PaylocityEmployeeBenefitsPackage.Models;
+using PaylocityEmployeeBenefitsPackage.Utility;
 
 namespace PaylocityEmployeeBenefitsPackage.Controllers
 {
@@ -44,7 +45,7 @@ namespace PaylocityEmployeeBenefitsPackage.Controllers
 
         public IActionResult AddDependent(int id)
         {
-          ViewData["EmployeeID"] = id;
+          ViewData[Constants.EmployeIDViewDataKey] = id;
             return View();
         }
 

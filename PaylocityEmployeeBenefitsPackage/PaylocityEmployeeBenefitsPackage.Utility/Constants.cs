@@ -8,5 +8,7 @@
         public const double DiscountRate = 0.1;
         public const double EmployeePayPerPayCheckBeforeDeductions = 2000;
         public const int PayRoundDecimals = 2;
+
+        public const string EmployeIDViewDataKey = "EmployeeID";
     }
 }

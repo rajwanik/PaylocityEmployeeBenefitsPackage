@@ -12,6 +12,8 @@ namespace PaylocityEmployeeBenefitsPackage.Models
         public string Name { get; set; }
 
         public DateTime CreatedDate { get; set; }
+
+        [Required]
         public RelationshipType Relationship { get; set; }
 
         public int EmployeeID { get; set; }
