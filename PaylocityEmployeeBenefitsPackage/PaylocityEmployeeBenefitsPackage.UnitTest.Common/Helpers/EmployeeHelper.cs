@@ -63,15 +63,21 @@ namespace PaylocityEmployeeBenefitsPackage.UnitTest.Common
             return employeeList;
         }
 
-        public static ApplicationDbContext BuildApplicationDbContext(string dbName, int numberOfEmployees)
+        public static ApplicationDbContext BuildApplicationDbContext(string dbName, int numberOfEmployees, bool includeDependents)
         {
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            optionsBuilder.UseInMemoryDatabase(dbName);
+            optionsBuilder.UseInMemoryDatabase(dbName + Guid.NewGuid().ToString());
             var applicationDbContext = new ApplicationDbContext(optionsBuilder.Options);
             //Add Test Data
             for (int i = 1; i <= numberOfEmployees; i++)
             {
-                applicationDbContext.Add(CreateNewEmployee(i, "Employee" + i.ToString()));
+                var employee = CreateNewEmployee(i, "Employee" + i.ToString());
+                applicationDbContext.Add(employee);
+                if (includeDependents)
+                {
+                    CreateNewDependentEmployee(employee,i,"EmployeeDependent" + i);
+                }
+
             }
             applicationDbContext.SaveChanges();
 
@@ -81,6 +87,20 @@ namespace PaylocityEmployeeBenefitsPackage.UnitTest.Common
         public static Employee CreateNewEmployee(int id, string name)
         {
             return new Employee() { ID = id, Name = name, CreatedDate = DateTime.Now, Salary = 52000 };
+        }
+
+        public static void CreateNewDependentEmployee(Employee employee, int id, string name)
+        {
+            var dependentEmployee = new EmployeeDependent();
+            dependentEmployee.Name = name;
+            dependentEmployee.Relationship = RelationshipType.Child;
+            dependentEmployee.CreatedDate = DateTime.Now;
+            dependentEmployee.EmployeeDependentIdentifier = id;
+            if (employee.Dependents == null)
+            {
+                employee.Dependents = new List<EmployeeDependent>();
+            }
+            employee.Dependents.Add(dependentEmployee);
         }
     }
 }
