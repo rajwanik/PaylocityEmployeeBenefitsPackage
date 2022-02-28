@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "PaylocityEmployeeBenefitsPackage.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/PaylocityEmployeeBenefitsPackage.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PaylocityEmployeeBenefitsPackage.Utility.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "PaylocityEmployeeBenefitsPackage.Utility/1.0.0": {
+      "type": "project",
+      "path": "../PaylocityEmployeeBenefitsPackage.Utility/PaylocityEmployeeBenefitsPackage.Utility.csproj",
+      "msbuildProject": "../PaylocityEmployeeBenefitsPackage.Utility/PaylocityEmployeeBenefitsPackage.Utility.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "PaylocityEmployeeBenefitsPackage.Utility >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\rajk01\\.nuget\\packages\\": {},
@@ -45,7 +64,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\personal\\LearningProjects\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage.Utility\\PaylocityEmployeeBenefitsPackage.Utility.csproj": {
+              "projectPath": "D:\\personal\\LearningProjects\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage.Utility\\PaylocityEmployeeBenefitsPackage.Utility.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

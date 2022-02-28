@@ -283,7 +283,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\personal\\LearningProjects\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage.Utility\\PaylocityEmployeeBenefitsPackage.Utility.csproj": {
+                "projectPath": "D:\\personal\\LearningProjects\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage\\PaylocityEmployeeBenefitsPackage.Utility\\PaylocityEmployeeBenefitsPackage.Utility.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

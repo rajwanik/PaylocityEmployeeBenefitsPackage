@@ -1672,6 +1672,9 @@
       "PaylocityEmployeeBenefitsPackage.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "PaylocityEmployeeBenefitsPackage.Utility": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/PaylocityEmployeeBenefitsPackage.Models.dll": {}
         },
@@ -1692,6 +1695,16 @@
         },
         "runtime": {
           "bin/placeholder/PaylocityEmployeeBenefitsPackage.UnitTest.Common.dll": {}
+        }
+      },
+      "PaylocityEmployeeBenefitsPackage.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/PaylocityEmployeeBenefitsPackage.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PaylocityEmployeeBenefitsPackage.Utility.dll": {}
         }
       }
     }
@@ -6212,6 +6225,11 @@
       "type": "project",
       "path": "../PaylocityEmployeeBenefitsPackage.UnitTest.Common/PaylocityEmployeeBenefitsPackage.UnitTest.Common.csproj",
       "msbuildProject": "../PaylocityEmployeeBenefitsPackage.UnitTest.Common/PaylocityEmployeeBenefitsPackage.UnitTest.Common.csproj"
+    },
+    "PaylocityEmployeeBenefitsPackage.Utility/1.0.0": {
+      "type": "project",
+      "path": "../PaylocityEmployeeBenefitsPackage.Utility/PaylocityEmployeeBenefitsPackage.Utility.csproj",
+      "msbuildProject": "../PaylocityEmployeeBenefitsPackage.Utility/PaylocityEmployeeBenefitsPackage.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {

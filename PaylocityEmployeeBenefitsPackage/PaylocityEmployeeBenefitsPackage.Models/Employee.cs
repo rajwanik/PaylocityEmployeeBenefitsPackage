@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using PaylocityEmployeeBenefitsPackage.Utility;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PaylocityEmployeeBenefitsPackage.Models
@@ -9,7 +10,7 @@ namespace PaylocityEmployeeBenefitsPackage.Models
         public int ID { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "Name cannot exceed 100 characters")]
+        [StringLength(100, ErrorMessage = Constants.EmployeeNameErrorMessage)]
         public string Name { get; set; }
 
         public DateTime CreatedDate { get; set; }

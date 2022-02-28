@@ -460,8 +460,16 @@
         }
       },
       "PaylocityEmployeeBenefitsPackage.Models/1.0.0": {
+        "dependencies": {
+          "PaylocityEmployeeBenefitsPackage.Utility": "1.0.0"
+        },
         "runtime": {
           "PaylocityEmployeeBenefitsPackage.Models.dll": {}
+        }
+      },
+      "PaylocityEmployeeBenefitsPackage.Utility/1.0.0": {
+        "runtime": {
+          "PaylocityEmployeeBenefitsPackage.Utility.dll": {}
         }
       }
     }
@@ -753,6 +761,11 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "PaylocityEmployeeBenefitsPackage.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PaylocityEmployeeBenefitsPackage.Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

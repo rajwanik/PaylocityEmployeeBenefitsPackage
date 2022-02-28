@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaylocityEmployeeBenefitsPa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaylocityEmployeeBenefitsPackage.Conrollers.UnitTest", "PaylocityEmployeeBenefitsPackage.Conrollers.UnitTest\PaylocityEmployeeBenefitsPackage.Conrollers.UnitTest.csproj", "{B89CA240-CAF7-4239-AEB8-A02E94B1DC26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaylocityEmployeeBenefitsPackage.Models.UnitTest", "PaylocityEmployeeBenefitsPackage.Models.UnitTest\PaylocityEmployeeBenefitsPackage.Models.UnitTest.csproj", "{50088B88-129E-4E82-8DE9-B1E018BEEB42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{B89CA240-CAF7-4239-AEB8-A02E94B1DC26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B89CA240-CAF7-4239-AEB8-A02E94B1DC26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B89CA240-CAF7-4239-AEB8-A02E94B1DC26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50088B88-129E-4E82-8DE9-B1E018BEEB42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50088B88-129E-4E82-8DE9-B1E018BEEB42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50088B88-129E-4E82-8DE9-B1E018BEEB42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50088B88-129E-4E82-8DE9-B1E018BEEB42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +87,7 @@ Global
 		{9ADED8CB-822E-4065-AB27-904F9301704B} = {E97708B4-B773-41C1-9A33-5D53A043689F}
 		{0FA5F394-934A-4B4B-B76B-5F73101528D5} = {E97708B4-B773-41C1-9A33-5D53A043689F}
 		{B89CA240-CAF7-4239-AEB8-A02E94B1DC26} = {E97708B4-B773-41C1-9A33-5D53A043689F}
+		{50088B88-129E-4E82-8DE9-B1E018BEEB42} = {E97708B4-B773-41C1-9A33-5D53A043689F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D565C92B-F5CE-4375-A386-B3E715EE721B}
