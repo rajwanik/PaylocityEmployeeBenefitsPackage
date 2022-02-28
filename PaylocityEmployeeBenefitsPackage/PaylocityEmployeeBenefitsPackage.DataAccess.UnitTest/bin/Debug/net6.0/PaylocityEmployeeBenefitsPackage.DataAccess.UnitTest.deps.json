@@ -1221,6 +1221,9 @@
         }
       },
       "PaylocityEmployeeBenefitsPackage.Models/1.0.0": {
+        "dependencies": {
+          "PaylocityEmployeeBenefitsPackage.Utility": "1.0.0"
+        },
         "runtime": {
           "PaylocityEmployeeBenefitsPackage.Models.dll": {}
         }
@@ -1233,6 +1236,11 @@
         },
         "runtime": {
           "PaylocityEmployeeBenefitsPackage.UnitTest.Common.dll": {}
+        }
+      },
+      "PaylocityEmployeeBenefitsPackage.Utility/1.0.0": {
+        "runtime": {
+          "PaylocityEmployeeBenefitsPackage.Utility.dll": {}
         }
       }
     }
@@ -1926,6 +1934,11 @@
       "sha512": ""
     },
     "PaylocityEmployeeBenefitsPackage.UnitTest.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PaylocityEmployeeBenefitsPackage.Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

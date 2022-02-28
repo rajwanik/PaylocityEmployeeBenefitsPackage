@@ -1,10 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PaylocityEmployeeBenefitsPackage.UI.Specflow
 {
@@ -32,14 +27,6 @@ namespace PaylocityEmployeeBenefitsPackage.UI.Specflow
 
         public static void SetupDriver()
         {
-            //if (string.IsNullOrEmpty(browser))
-            //    browser = ConfigurationManager.AppSettings["defaultBrowser"];
-
-            //if (UseSeleniumGrid)
-            //    CreateWebDriverForHub(browser);
-            //else
-            //    CreateWebDriver(browser);
-
             var driver = new ChromeDriver();
             _current = driver;
 

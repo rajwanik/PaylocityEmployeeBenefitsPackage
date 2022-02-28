@@ -1,8 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using PaylocityEmployeeBenefitsPackage.Data;
+﻿using PaylocityEmployeeBenefitsPackage.Data;
 using PaylocityEmployeeBenefitsPackage.DataAccess.Repository.IRepository;
 using PaylocityEmployeeBenefitsPackage.Models;
-using System.Linq.Expressions;
 
 namespace PaylocityEmployeeBenefitsPackage.DataAccess.Repository
 {

@@ -1,10 +1,9 @@
+using FluentAssertions;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using PaylocityEmployeeBenefitsPackage.Controllers;
 using PaylocityEmployeeBenefitsPackage.Models;
 using PaylocityEmployeeBenefitsPackage.UI.Specflow.Common;
-using System;
 using TechTalk.SpecFlow;
 
 namespace PaylocityEmployeeBenefitsPackage.UI.Specflow
@@ -70,6 +69,23 @@ namespace PaylocityEmployeeBenefitsPackage.UI.Specflow
         {
             Assert.IsTrue(WebDriverContext.Current.Url.EndsWith(EmployeeIndexLandingPage), string.Format("Incorrect Landing Page expected {0}, but was {1}", EmployeeIndexLandingPage, WebDriverContext.Current.Url));
         }
+
+        [Then(@"I should see the following column title in (.*)")]
+        public void ThenIShouldSeeTheFollowingColumnTitle(string controlId, Table table)
+        {
+            var heads = WebDriverContext.Current.FindElements(By.XPath("//table[@id='" + controlId + "']//thead//tr[1]//th"));
+            int i = 0;
+
+            foreach (var tableRow in table.Rows)
+            {
+                
+                var value = tableRow["ColumnTitle"];
+                heads[i].Text.Should().Be(value, $"Expected Value: {heads[i].Text} does not match with actual value {value}");
+                i++;
+            }
+        }
+
+
 
     }
 }

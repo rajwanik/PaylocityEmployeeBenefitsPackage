@@ -110,6 +110,23 @@ this.ScenarioInitialize(scenarioInfo);
 #line 9
  testRunner.Then("I should see employees in the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ColumnTitle"});
+                table1.AddRow(new string[] {
+                            "Employee ID"});
+                table1.AddRow(new string[] {
+                            "Created Date"});
+                table1.AddRow(new string[] {
+                            "Employee Name"});
+                table1.AddRow(new string[] {
+                            "Salary Per Pay Period"});
+                table1.AddRow(new string[] {
+                            "Employee Benefit Cost"});
+                table1.AddRow(new string[] {
+                            "Employee Dependent Benefit Cost"});
+#line 10
+ testRunner.And("I should see the following column title in employeeList", ((string)(null)), table1, "And ");
+#line hidden
             }
             this.ScenarioCleanup();
         }
@@ -121,7 +138,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I should be successfully add new employee", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 12
+#line 21
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -141,28 +158,28 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 13
+#line 22
  testRunner.Given("I launch Payroll Employee Benefits Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 14
+#line 23
  testRunner.And("I click on Employee menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 15
+#line 24
  testRunner.When("I click on create new employee button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 16
+#line 25
  testRunner.Then("I am redirected to create employee page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 17
+#line 26
  testRunner.And("I fill employee name Mary", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 18
+#line 27
  testRunner.And("I fill Salary Per Year 52000", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 19
+#line 28
  testRunner.And("I click on Create button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 20
+#line 29
  testRunner.Then("employee is successfully created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

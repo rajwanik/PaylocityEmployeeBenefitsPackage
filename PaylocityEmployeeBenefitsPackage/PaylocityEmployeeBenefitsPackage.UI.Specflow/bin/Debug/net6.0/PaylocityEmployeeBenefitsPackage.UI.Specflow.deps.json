@@ -9,6 +9,7 @@
       "PaylocityEmployeeBenefitsPackage.UI.Specflow/1.0.0": {
         "dependencies": {
           "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
+          "FluentAssertions": "6.5.1",
           "Microsoft.NET.Test.Sdk": "17.1.0",
           "Microsoft.TestPlatform.TestHost": "17.1.0",
           "NUnit": "3.13.2",
@@ -42,6 +43,17 @@
           "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll": {
             "assemblyVersion": "3.11.0.0",
             "fileVersion": "3.11.0.0"
+          }
+        }
+      },
+      "FluentAssertions/6.5.1": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.7.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/FluentAssertions.dll": {
+            "assemblyVersion": "6.5.1.0",
+            "fileVersion": "6.5.1.0"
           }
         }
       },
@@ -2505,6 +2517,9 @@
         }
       },
       "PaylocityEmployeeBenefitsPackage.Models/1.0.0": {
+        "dependencies": {
+          "PaylocityEmployeeBenefitsPackage.Utility": "1.0.0"
+        },
         "runtime": {
           "PaylocityEmployeeBenefitsPackage.Models.dll": {}
         }
@@ -2535,6 +2550,13 @@
       "sha512": "sha512-xc6jVVl5ymgk3ZNWnC/KHxkEup1QpnwYbrwF+NQoCOGERsD8YMlLwmsX4lGhLXCLo/YQTRTIwlKCN9E/doGUNg==",
       "path": "dotnetseleniumextras.waithelpers/3.11.0",
       "hashPath": "dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512"
+    },
+    "FluentAssertions/6.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hdY/upTFYEc7SFJQ+pKsMZP1J5bELh9feB8kXzk6FKAGE/tvAPDzHd76Z+nIYdgnqkocthaDUq+tKPsGD0um2A==",
+      "path": "fluentassertions/6.5.1",
+      "hashPath": "fluentassertions.6.5.1.nupkg.sha512"
     },
     "Gherkin/19.0.3": {
       "type": "package",
