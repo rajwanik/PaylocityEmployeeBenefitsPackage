@@ -32,20 +32,20 @@ I have used Flatly theme from https://bootswatch.com/
 **Project Breakdown**:
 There are 11 projects in the solution. 5 of them contain code and 6 of them are for Unit/UI Automation Testing.
 
-5 projects that contain code are below:
-1. PaylocityEmployeeBenefitsPackage - This is the main project containing Controllers and Views.
-2. PaylocityEmployeeBenefitsPackage.Business - This is the meat of the project containing crtical Business Logic. I am calling this Business Layer.
-3. PaylocityEmployeeBenefitsPackage.DataAccess - This Data Access Layer. Containing all repository for accessing the database.
-4. PaylocityEmployeeBenefitsPackage.Models - This project contains all Models
-5. PaylocityEmployeeBenefitsPackage.Utility - This Project contains common code that can be used in all layers.
+**5 projects that contain code are below**:
+1. **PaylocityEmployeeBenefitsPackage** - This is the main project containing Controllers and Views.
+2. **PaylocityEmployeeBenefitsPackage.Business** - This is the meat of the project containing crtical Business Logic. I am calling this Business Layer.
+3. **PaylocityEmployeeBenefitsPackage.DataAccess** - This Data Access Layer. Containing all repository for accessing the database.
+4. **PaylocityEmployeeBenefitsPackage.Models** - This project contains all Models
+5. **PaylocityEmployeeBenefitsPackage.Utility** - This Project contains common code that can be used in all layers.
 
-6 projects that contain NUnit/UI Automation:
-1. PaylocityEmployeeBenefitsPackage.Business.UnitTest - This project contains NUnit for all business layer.
-2. PaylocityEmployeeBenefitsPackage.Conrollers.UnitTest - This project contains NUnit for all controllers. Mocking of dependencies are done using Moq.
-3. PaylocityEmployeeBenefitsPackage.DataAccess.UnitTest - This project contains NUnit for all data access layer.  Mocking of dependencies are done using Moq.
-4. PaylocityEmployeeBenefitsPackage.Models.UnitTest - This project contains NUnit for all models (validation).
-5. PaylocityEmployeeBenefitsPackage.UI.Specflow - This project contains Specflow (https://specflow.org/) for all business layer. This project uses Selenium WebDriver to launch these test in Chrome and tested them automatically.
-6. PaylocityEmployeeBenefitsPackage.UnitTest.Common - This project contains common code that can be used across all test projects.
+**6 projects that contain NUnit/UI Automation**:
+1. **PaylocityEmployeeBenefitsPackage.Business.UnitTest** - This project contains NUnit for all business layer.
+2. **PaylocityEmployeeBenefitsPackage.Conrollers.UnitTest** - This project contains NUnit for all controllers. Mocking of dependencies are done using Moq.
+3. **PaylocityEmployeeBenefitsPackage.DataAccess.UnitTest** - This project contains NUnit for all data access layer.  Mocking of dependencies are done using Moq.
+4. **PaylocityEmployeeBenefitsPackage.Models.UnitTest** - This project contains NUnit for all models (validation).
+5. **PaylocityEmployeeBenefitsPackage.UI.Specflow** - This project contains Specflow (https://specflow.org/) for all business layer. This project uses Selenium WebDriver to launch these test in Chrome and tested them automatically.
+6. **PaylocityEmployeeBenefitsPackage.UnitTest.Common** - This project contains common code that can be used across all test projects.
 
 **Database**:
 Database that I used was named PaylocityPayroll in my local localDB instance named (localdb)\\MSSQLLocalDB
