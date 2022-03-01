@@ -8,7 +8,7 @@ Scenario: I should be successfully view employee list
 	When I click on Employee menu
 	Then I should see employees in the system
 	And I should see the following column title in employeeList
-	| ColumnTitle                     |
+	| ColumnTitle                    |
 	| Employee ID                     |
 	| Created Date                    |
 	| Employee Name                   |
